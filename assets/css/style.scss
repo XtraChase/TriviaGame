@@ -57,6 +57,19 @@ h1.show {
   transition: opacity 0.5s ease;
 }
 
+#total {
+  position: absolute;
+  color: azure;
+  text-shadow: (1px 1px 5px rgba(0, 0, 0, 0.9));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 65px;
+}
+
 h2 {
   font-size: 1.8em;
   letter-spacing: 7px;

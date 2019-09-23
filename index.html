@@ -25,6 +25,9 @@
     </div>
     <div><h1>Trivia</h1></div>
 
+    <!-- CREATE DIV in javascript TO SHOW CORRECT -->
+    <div id="total"></div>
+
     <section class="game">
       <div class="time-remaining">
         <h2 id="timer"></h2>
@@ -33,10 +36,11 @@
       <div class="questions">
         <div class="question-1">
           <p>What color are aircraft black boxes?</p>
-          <form>
+          <form id="answer-one">
             <h4>
               <input name="one" type="radio" value="one-one" /> black
-              <input name="one" type="radio" value="one-two" /> orange - correct
+              <input name="one" type="radio" value="one-two" id="correct" />
+              orange - correct
               <input name="one" type="radio" value="one-three" /> purple
               <input name="one" type="radio" value="one-four" /> green
             </h4>
@@ -44,12 +48,13 @@
         </div>
         <div class="question-two">
           <p>Where did Spanish flu originate?</p>
-          <form>
+          <form id="">
             <h4>
               <input name="two" type="radio" value="two-one" /> answer 1
               <input name="two" type="radio" value="two-two" /> answer 2
               <input name="two" type="radio" value="two-three" /> answer 3
-              <input name="two" type="radio" value="two-four" /> USA - correct
+              <input name="two" type="radio" value="two-four" id="correct" />
+              USA - correct
             </h4>
           </form>
         </div>
@@ -57,8 +62,8 @@
           <p>From which country do French fries originate?</p>
           <form>
             <h4>
-              <input name="three" type="radio" value="three-one" /> Belgium -
-              correct
+              <input name="three" type="radio" value="three-one" id="correct" />
+              Belgium - correct
               <input name="three" type="radio" value="three-two" /> answer 2
               <input name="three" type="radio" value="three-three" /> answer 3
               <input name="three" type="radio" value="three-four" /> answer 4
@@ -71,8 +76,8 @@
             <h4>
               <input name="four" type="radio" value="four-one" /> answer 1
               <input name="four" type="radio" value="four-two" /> answer 2
-              <input name="four" type="radio" value="four-three" /> opens fridge
-              - correct
+              <input name="four" type="radio" value="four-three" id="correct" />
+              opens fridge - correct
               <input name="four" type="radio" value="four-four" /> answer 4
             </h4>
           </form>

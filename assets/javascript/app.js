@@ -1,8 +1,11 @@
 var title = document.querySelector("h1");
 var startBtn = document.querySelector(".start");
 var game = document.querySelector(".game");
-let seconds = 1;
-let minutes = 1;
+var total = document.getElementById("total");
+var rightAnswers = 0;
+var wrongAnswers = 0;
+let seconds = 5;
+let minutes = 0;
 let displaySeconds = 0;
 let displayMinutes = 0;
 
@@ -42,8 +45,19 @@ function startTimer() {
   } else {
     displayMinutes = minutes;
   }
-  document.getElementById("timer").innerHTML =
-    "Time Remaining: " + displayMinutes + ":" + displaySeconds;
+  if (seconds > 0 || minutes > 0) {
+    document.getElementById("timer").innerHTML =
+      "Time Remaining: " + displayMinutes + ":" + displaySeconds;
+  }
+
+  //if timer reaches 0
+  if (seconds === 0 && minutes === 0) {
+    if (game.parentNode) {
+      game.parentNode.removeChild(game);
+    }
+    total.innerHTML =
+      "Correct: " + rightAnswers + "</br>" + "Wrong: " + wrongAnswers;
+  }
 }
 
 //start button
@@ -51,4 +65,24 @@ startBtn.onclick = function() {
   this.parentNode.removeChild(this);
   game.className = "show";
   window.setInterval(startTimer, 1000);
+  //add event listeners to all buttons
+  var inputs = document.getElementsByTagName("input");
+
+  for (i = 1; i < inputs.length; i++) {
+    if (inputs[i].type == "radio") {
+      inputs[i].addEventListener("click", trivia);
+    }
+  }
 };
+
+//if user input = answer or if it doesn't
+function trivia(e) {
+  e.target.checked;
+  if (e.target.id == "correct") {
+    rightAnswers++;
+    console.log("correct");
+  } else {
+    wrongAnswers++;
+    console.log("wrong");
+  }
+}

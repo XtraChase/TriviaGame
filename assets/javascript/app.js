@@ -4,8 +4,8 @@ var game = document.querySelector(".game");
 var total = document.getElementById("total");
 var rightAnswers = 0;
 var wrongAnswers = 0;
-let seconds = 5;
-let minutes = 0;
+let seconds = 1;
+let minutes = 1;
 let displaySeconds = 0;
 let displayMinutes = 0;
 

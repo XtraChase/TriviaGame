@@ -85,4 +85,7 @@ function trivia(e) {
     wrongAnswers++;
     console.log("wrong");
   }
+  if (rightAnswers > 10) {
+    rightAnswers == 10;
+  }
 }
